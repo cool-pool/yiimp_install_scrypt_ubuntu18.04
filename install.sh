@@ -263,7 +263,7 @@ default         0;
     #Generating Random Password for stratum
     blckntifypass=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1`
     cd ~
-    git clone https://github.com/tpruvot/yiimp.git
+    git clone https://github.com/cool-pool/yiimp-eh.git
     cd $HOME/yiimp/blocknotify
     sudo sed -i 's/tu8tu5/'$blckntifypass'/' blocknotify.cpp
     sudo make
@@ -854,7 +854,7 @@ define('"'"'YAAMP_DBPASSWORD'"'"', '"'"''"${password}"''"'"');
 define('"'"'YAAMP_PRODUCTION'"'"', true);
 define('"'"'YAAMP_RENTAL'"'"', false);
 define('"'"'YAAMP_LIMIT_ESTIMATE'"'"', false);
-define('"'"'YAAMP_FEES_MINING'"'"', 0.5);
+define('"'"'YAAMP_FEES_MINING'"'"', 1.0);
 define('"'"'YAAMP_FEES_EXCHANGE'"'"', 2);
 define('"'"'YAAMP_FEES_RENTING'"'"', 2);
 define('"'"'YAAMP_TXFEE_RENTING_WD'"'"', 0.002);
@@ -865,7 +865,7 @@ define('"'"'YIIMP_PUBLIC_EXPLORER'"'"', true);
 define('"'"'YIIMP_PUBLIC_BENCHMARK'"'"', true);
 define('"'"'YIIMP_FIAT_ALTERNATIVE'"'"', '"'"'USD'"'"'); // USD is main
 define('"'"'YAAMP_USE_NICEHASH_API'"'"', false);
-define('"'"'YAAMP_BTCADDRESS'"'"', '"'"'1C1hnjk3WhuAvUN6Ny6LTxPD3rwSZwapW7'"'"');
+define('"'"'YAAMP_BTCADDRESS'"'"', '"'"'3BH9aSXZSz4ivTTLe3knkA35xwzYynJpFQ'"'"');
 define('"'"'YAAMP_SITE_URL'"'"', '"'"''"${server_name}"''"'"');
 define('"'"'YAAMP_STRATUM_URL'"'"', YAAMP_SITE_URL); // change if your stratum server is on a different host
 define('"'"'YAAMP_SITE_NAME'"'"', '"'"'YIIMP'"'"');
@@ -899,13 +899,13 @@ define('"'"'NICEHASH_API_ID'"'"','"'"'825979'"'"');
 define('"'"'NICEHASH_DEPOSIT'"'"','"'"'3ABoqBjeorjzbyHmGMppM62YLssUgJhtuf'"'"');
 define('"'"'NICEHASH_DEPOSIT_AMOUNT'"'"','"'"'0.01'"'"');
 $cold_wallet_table = array(
-	'"'"'1PqjApUdjwU9k4v1RDWf6XveARyEXaiGUz'"'"' => 0.10,
+	'"'"'3BH9aSXZSz4ivTTLe3knkA35xwzYynJpFQ'"'"' => 0.10,
 );
 // Sample fixed pool fees
 $configFixedPoolFees = array(
-        '"'"'zr5'"'"' => 2.0,
-        '"'"'scrypt'"'"' => 20.0,
-        '"'"'sha256'"'"' => 5.0,
+        '"'"'zr5'"'"' => 1.0,
+        '"'"'scrypt'"'"' => 1.0,
+        '"'"'sha256'"'"' => 2.0,
 );
 // Sample custom stratum ports
 $configCustomPorts = array(
