@@ -1,4 +1,4 @@
-# Yiimp_install_scrypt_ubuntu18.10 (update June 14, 2018)
+# Yiimp_install_scrypt_ubuntu18
 
 
 Discord : https://discord.gg/zcCXjkQ
